@@ -3,17 +3,22 @@
   "packageManager": "yarn@4.5.3",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.ts",
   "author": "Sean Derrow",
   "license": "ISC",
   "scripts": {
-    "dev": "node -r @swc-node/register index.ts"
+    "dev": "nodemon --exec 'SWCRC=true node --import @swc-node/register/esm-register' index.ts",
+    "start": "SWCRC=true node --import @swc-node/register/esm-register index.ts",
+    "build": "swc --config-file .swcrc --out-dir dist index.ts src",
+    "start:js": "yarn build && node dist/index.js"
   },
   "devDependencies": {
     "@swc-node/register": "^1.10.9",
+    "@swc/cli": "^0.5.2",
     "@swc/core": "^1.10.0",
     "@swc/types": "^0.1.17",
-    "@types/luxon": "^3.4.2",
+    "@types/luxon": "^3",
     "@types/node": "^22.10.1",
     "nodemon": "^3.1.7",
     "prettier": "^3.4.2",

@@ -1,0 +1,19 @@
+{
+  "$schema": "https://swc.rs/schema.json",
+  "jsc": {
+    "parser": {
+      "syntax": "typescript"
+    },
+    "target": "es2023",
+    "experimental": {
+      "keepImportAssertions": true
+    },
+    "baseUrl": "./"
+  },
+  "module": {
+    "type": "nodenext",
+    "resolveFully": true,
+    "importInterop": "node"
+  },
+  "sourceMaps": true
+}
