@@ -804,9 +804,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"aoc-yarn@workspace:.":
+"aoc-swc@workspace:.":
   version: 0.0.0-use.local
-  resolution: "aoc-yarn@workspace:."
+  resolution: "aoc-swc@workspace:."
   dependencies:
     "@swc-node/register": "npm:^1.10.9"
     "@swc/cli": "npm:^0.5.2"
