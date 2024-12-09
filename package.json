@@ -1,5 +1,5 @@
 {
-  "name": "aoc-swc",
+  "name": "swc-demo",
   "packageManager": "yarn@4.5.3",
   "version": "1.0.0",
   "description": "",
@@ -8,10 +8,14 @@
   "author": "Sean Derrow",
   "license": "ISC",
   "scripts": {
-    "dev": "nodemon --exec 'SWCRC=true node --import @swc-node/register/esm-register' index.ts",
-    "start": "SWCRC=true node --import @swc-node/register/esm-register index.ts",
-    "build": "swc --config-file .swcrc --out-dir dist index.ts src",
-    "start:js": "yarn build && node dist/index.js"
+    "dev": "nodemon --exec 'SWCRC=true node --import @swc-node/register/esm-register' ./src/index.ts",
+    "start": "SWCRC=true node --import @swc-node/register/esm-register ./src/index.ts",
+    "build": "swc --config-file .swcrc --out-dir dist src",
+    "start:js": "yarn build && node dist/src/index.js"
+  },
+  "scriptsComments": {
+    "build": "Not necessary to have this, but I wanted to see if I could get it to work",
+    "start:js": "Not necessary to have this, but I wanted to see if I could get it to work"
   },
   "devDependencies": {
     "@swc-node/register": "^1.10.9",
